@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Charlene Teo — Design & AI</title>
+  <meta name="description" content="Charlene Teo — analyst at UOB building AI document pipelines. SUTD Design & Artificial Intelligence graduate. Selected work in AI, data and product design." />
+  <meta property="og:title" content="Charlene Teo — Design & AI" />
+  <meta property="og:description" content="Selected work in AI, data and product design." />
+  <meta property="og:image" content="assets/img/banking.jpg" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23c2502e'/><text x='32' y='43' font-family='Georgia' font-size='30' font-style='italic' text-anchor='middle' fill='%23f4f0e8'>ct</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">Charlene Teo<span class="dot">.</span></a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9Z" fill="currentColor"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="eyebrow reveal">Design &amp; Artificial Intelligence · Singapore</p>
+        <h1 class="reveal">
+          Turning messy data into <em>thoughtful</em>, human&#8209;centred products.
+        </h1>
+        <p class="lede reveal">
+          I'm Charlene — an analyst at <strong>United Overseas Bank</strong> building
+          LLM-powered document pipelines, and a Design &amp; AI graduate of
+          <strong>SUTD</strong>. I like working where machine learning, finance and
+          good design meet.
+        </p>
+        <div class="hero-cta reveal">
+          <a class="btn btn-solid" href="#work">See my work <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-ghost" href="assets/Charlene-Teo-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+        </div>
+      </div>
+      <figure class="hero-portrait reveal">
+        <div class="arch"><img src="assets/img/portrait.jpg" alt="Portrait of Charlene Teo" /></div>
+        <figcaption><span class="pulse"></span> Currently @ UOB</figcaption>
+      </figure>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>LLMs</span><span>✦</span><span>Document AI</span><span>✦</span><span>Graph analytics</span><span>✦</span><span>MLOps</span><span>✦</span><span>Product design</span><span>✦</span><span>Full-stack</span><span>✦</span><span>Fintech</span><span>✦</span>
+        <span>LLMs</span><span>✦</span><span>Document AI</span><span>✦</span><span>Graph analytics</span><span>✦</span><span>MLOps</span><span>✦</span><span>Product design</span><span>✦</span><span>Full-stack</span><span>✦</span><span>Fintech</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="section-head">
+        <p class="label">01 — Selected work</p>
+        <h2>Projects</h2>
+        <div class="filters" role="group" aria-label="Filter projects">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="ai">AI &amp; Data</button>
+          <button class="chip" data-filter="fintech">Fintech</button>
+          <button class="chip" data-filter="design">Product &amp; Design</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <!-- AML -->
+        <article class="card card-wide reveal" data-tags="ai fintech" data-project="aml">
+          <div class="card-media type-art art-graph">
+            <svg viewBox="0 0 400 240" aria-hidden="true">
+              <g class="edges"><path d="M70 60 L200 40 L330 90 L260 190 L120 180 Z M200 40 L260 190 M70 60 L120 180"/></g>
+              <g class="nodes"><circle cx="70" cy="60" r="9"/><circle cx="200" cy="40" r="12"/><circle cx="330" cy="90" r="9"/><circle cx="260" cy="190" r="14" class="hot"/><circle cx="120" cy="180" r="10"/></g>
+            </svg>
+            <span class="art-stat">127 <small>laundering cycles detected</small></span>
+          </div>
+          <div class="card-body">
+            <p class="card-meta">AI · Graph · MLOps</p>
+            <h3>AML Transaction Monitoring Platform</h3>
+            <p>End-to-end anti-money-laundering system — Airflow ingestion, MLflow-tracked models, Neo4j graph detection and a React analyst dashboard.</p>
+          </div>
+          <div class="detail" hidden>
+            <p class="detail-intro">A production-style platform for detecting money laundering in bank transactions, from raw ingestion all the way to an analyst-facing alert queue.</p>
+            <ul class="stats">
+              <li><b>0.18 → 0.42</b><span>avg. precision with graph features</span></li>
+              <li><b>43%</b><span>alert-queue hit rate vs 1% base rate</span></li>
+              <li><b>60+</b><span>automated tests in CI</span></li>
+            </ul>
+            <ul>
+              <li>Built an Airflow pipeline ingesting 20,000 synthetic bank transactions per batch with automated validation, idempotent loads and quarantine of invalid batches, supported by GitHub Actions CI.</li>
+              <li>Trained scikit-learn laundering-detection models tracked in MLflow, promoting a new model only when it outperforms the current one, and served them through a FastAPI scoring API that shares feature code with training.</li>
+              <li>Modelled transactions as a Neo4j graph, using Cypher queries to detect 127 money-laundering cycles at 100% precision.</li>
+              <li>Developed a React and TypeScript analyst dashboard, deployable with Docker and Kubernetes.</li>
+            </ul>
+            <p class="tech">Airflow · scikit-learn · MLflow · FastAPI · Neo4j · React · TypeScript · Docker · Kubernetes</p>
+          </div>
+        </article>
+
+        <!-- Predictive maintenance -->
+        <article class="card reveal" data-tags="ai" data-project="pdm">
+          <div class="card-media type-art art-wave">
+            <svg viewBox="0 0 400 240" aria-hidden="true" preserveAspectRatio="none">
+              <path class="w1" d="M0 140 C40 120 60 160 100 140 S160 110 200 135 S250 170 280 60 S330 150 400 130"/>
+              <path class="w2" d="M0 170 C50 160 80 180 120 168 S190 150 230 172 S300 185 400 165"/>
+              <circle cx="280" cy="60" r="10" class="hot"/>
+            </svg>
+            <span class="art-stat">89% <small>accuracy on unlabelled sensor data</small></span>
+          </div>
+          <div class="card-body">
+            <p class="card-meta">AI · with ST Engineering</p>
+            <h3>Predictive Maintenance of Military Vehicles</h3>
+            <p>Unsupervised anomaly detection on time-series sensor data to catch faults before they happen.</p>
+          </div>
+          <div class="detail" hidden>
+            <p class="detail-intro">An AI-powered predictive maintenance system built with ST Engineering to improve combat readiness through early fault detection and proactive maintenance scheduling.</p>
+            <ul>
+              <li>Built an ensemble unsupervised learning model achieving 89% accuracy on unlabelled time-series sensor data, combining statistical methods, clustering algorithms (K-means, DBSCAN) and deep learning techniques to identify anomalies.</li>
+              <li>Developed interactive dashboards for technicians, drivers and administrators to monitor fleet health, report issues and detect potential failures before they occur — optimising maintenance workflows and reducing unplanned downtime.</li>
+            </ul>
+            <p class="tech">Python · K-means · DBSCAN · Deep learning · Dashboards</p>
+          </div>
+        </article>
+
+        <!-- Banking -->
+        <article class="card reveal" data-tags="fintech design" data-project="banking">
+          <div class="card-media"><img src="assets/img/banking.jpg" alt="Three phone screens of the banking onboarding app" loading="lazy" /></div>
+          <div class="card-body">
+            <p class="card-meta">Fintech · with DBS</p>
+            <h3>Seamless Banking Onboarding for Foreigners</h3>
+            <p>Account opening without Singpass — cut from 2 weeks to 3 days with OCR, facial verification and NFC.</p>
+          </div>
+          <div class="detail" hidden>
+            <img src="assets/img/banking.jpg" alt="Banking onboarding app screens" />
+            <p class="detail-intro">A full-stack web banking application, built with DBS, that streamlines online account opening for foreigners who don't have Singpass access.</p>
+            <ul class="stats">
+              <li><b>2 wks → 3 days</b><span>account opening time</span></li>
+            </ul>
+            <ul>
+              <li>Integrated OCR-based document scanning to extract key information from passports, work passes and proof-of-address documents, reducing manual input errors and verification time.</li>
+              <li>Implemented facial recognition — matching the user's face to their passport photo — and NFC-based passport reading to verify identity and document authenticity.</li>
+            </ul>
+            <p class="tech">Ruby on Rails · JavaScript · CSS · Figma · API integration</p>
+            <a class="btn btn-ghost" href="https://sites.google.com/view/teamscrumble/project-all-aboard" target="_blank" rel="noopener">View project site ↗</a>
+          </div>
+        </article>
+
+        <!-- Kid Track -->
+        <article class="card reveal" data-tags="design ai" data-project="kidtrack">
+          <div class="card-media"><img src="assets/img/kidtrack-poster.jpg" alt="Kid Track product poster" loading="lazy" class="top" /></div>
+          <div class="card-body">
+            <p class="card-meta">Hardware · Product design</p>
+            <h3>Kid Track</h3>
+            <p>Safe, comfortable wearables for toddlers, with a live dashboard for teachers and parents.</p>
+          </div>
+          <div class="detail" hidden>
+            <div class="gallery">
+              <img src="assets/img/kidtrack-poster.jpg" alt="Kid Track poster" />
+              <img src="assets/img/kidtrack-dashboard.jpg" alt="Kid Track dashboard on a phone" />
+              <img src="assets/img/kidtrack-mounts.png" alt="Kid Track wearable mounts" />
+            </div>
+            <p class="detail-intro">Designed and prototyped safe and comfortable wearables for toddlers.</p>
+            <ul>
+              <li>The wearables detect a toddler's safety activity (like falls), temperature and heart rate, and monitor battery charge and status.</li>
+              <li>An "anywhere" core snaps into ergonomic "everywhere" mounts that fit a toddler's waist and/or arm.</li>
+              <li>Physiological data is processed and displayed on a dashboard accessible to teachers and parents.</li>
+            </ul>
+            <p class="tech">Arduino · React · Adobe Illustrator</p>
+          </div>
+        </article>
+
+        <!-- Itinereasy -->
+        <article class="card reveal" data-tags="ai design" data-project="itinereasy">
+          <div class="card-media"><img src="assets/img/itinereasy.jpg" alt="Itinereasy app screens" loading="lazy" /></div>
+          <div class="card-body">
+            <p class="card-meta">AI · Mobile app</p>
+            <h3>Itinereasy</h3>
+            <p>A travel app that generates personalised itineraries with AI, tailored to how you like to travel.</p>
+          </div>
+          <div class="detail" hidden>
+            <img src="assets/img/itinereasy.jpg" alt="Itinereasy app screens" />
+            <p class="detail-intro">A travel application that generates personalised itineraries using AI, tailored to users' preferences.</p>
+            <ul>
+              <li>Users fill in a questionnaire covering trip destination, purpose, duration, activity preferences and food preferences.</li>
+              <li>Using the OpenAI API, an itinerary is generated from those preferences.</li>
+              <li>Users can edit or share the generated itinerary with other users.</li>
+            </ul>
+            <p class="tech">JavaScript · CSS · Figma · OpenAI API</p>
+          </div>
+        </article>
+
+        <!-- Text analysis -->
+        <article class="card reveal" data-tags="ai design" data-project="text">
+          <div class="card-media media-pad"><img src="assets/img/text-sentiment.png" alt="Sentiment over time chart for Apple Watch" loading="lazy" /></div>
+          <div class="card-body">
+            <p class="card-meta">NLP · Design research</p>
+            <h3>Text Analytics for Design Opportunities</h3>
+            <p>Mining Amazon and YouTube reviews to find where products like the Apple Watch can be better.</p>
+          </div>
+          <div class="detail" hidden>
+            <div class="gallery">
+              <img src="assets/img/text-sentiment.png" alt="Sentiment over time chart" />
+              <img src="assets/img/text-table.png" alt="Review table with sentiment scores" />
+            </div>
+            <p class="detail-intro">Identifying design opportunities that improve the user experience of a specific product, such as the Apple Watch, using text analytics.</p>
+            <ul>
+              <li>Web-scraped and cleaned review data from Amazon and YouTube.</li>
+              <li>Applied zero-shot classification and sentiment analysis to surface pain points over time.</li>
+              <li>Used ChatGPT prompt generation and DALL·E image generation to explore areas of improvement and compare them with market benchmarks — giving designers concrete inspiration.</li>
+            </ul>
+            <p class="tech">Web scraping · NLP · Zero-shot classification · Sentiment analysis · DALL·E</p>
+          </div>
+        </article>
+
+        <!-- Voller -->
+        <article class="card reveal" data-tags="design" data-project="voller">
+          <div class="card-media"><img src="assets/img/voller.jpg" alt="Voller wrist-mounted multi-tool on a wooden hand model" loading="lazy" /></div>
+          <div class="card-body">
+            <p class="card-meta">Industrial design · Award</p>
+            <h3>Voller</h3>
+            <p>A modular, wrist-mounted multi-tool. James Dyson Foundation Industry 4.0 &amp; 3D Printing award.</p>
+          </div>
+          <div class="detail" hidden>
+            <img src="assets/img/voller.jpg" alt="Voller multi-tool" />
+            <p class="award-tag">🏆 The James Dyson Foundation Industry 4.0 and 3D Printing (30.303) Project Award</p>
+            <p class="detail-intro">Voller is a modular, wrist-mounted multi-tool designed for efficiency and ease of use, integrating a tape dispenser, wrench, pliers, measuring tool and screwdriver into a compact, wearable device.</p>
+            <ul>
+              <li>Ergonomic design ensures a comfortable grip, letting tools transition seamlessly from the back of the hand to the palm for quick access.</li>
+              <li>Built around modularity — users can swap tools as needed, making it adaptable to many tasks.</li>
+              <li>Keeps essential tools within reach and removes the need to carry multiple standalone tools.</li>
+            </ul>
+            <p class="tech">3D printing · CAD · Ergonomics</p>
+          </div>
+        </article>
+
+        <!-- Code for Good -->
+        <article class="card card-wide reveal" data-tags="design" data-project="cfg">
+          <div class="card-media type-art art-leaf">
+            <svg viewBox="0 0 400 240" aria-hidden="true">
+              <path class="stem" d="M200 230 C200 180 198 140 200 90"/>
+              <path class="leaf" d="M200 150 C150 150 120 115 115 80 C160 82 195 110 200 150 Z"/>
+              <path class="leaf" d="M201 120 C250 118 278 85 285 50 C240 52 205 80 201 120 Z"/>
+              <circle cx="200" cy="80" r="10" class="hot"/>
+            </svg>
+            <span class="art-stat">Hackathon <small>JP Morgan Code for Good</small></span>
+          </div>
+          <div class="card-body">
+            <p class="card-meta">Hackathon · Web app</p>
+            <h3>Code for Good — Urban Gardening</h3>
+            <p>Connecting urban gardeners and promoting food security through community.</p>
+          </div>
+          <div class="detail" hidden>
+            <p class="detail-intro">At JP Morgan's Code for Good, our team built a planting community application to encourage people to start planting and contribute to food security — simplifying how to get started and creating a platform for community engagement.</p>
+            <ul>
+              <li>A personalised survey recommends the type of plant each user is best suited to grow — a fun, engaging entry point.</li>
+              <li>Condition-based search finds plants by sunlight exposure, water needs and other growing conditions.</li>
+              <li>A peer-to-peer barter system lets users trade the fruit and vegetables they grow, fostering a local exchange economy.</li>
+              <li>An interactive map highlights community planting areas, and embedded Reddit forum links help gardeners ask questions and share progress.</li>
+            </ul>
+            <p class="tech">Next.js · Node.js</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section-head">
+        <p class="label">02 — Experience</p>
+        <h2>Where I've worked</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="role reveal">
+          <div class="role-when">Aug 2025 — Present</div>
+          <div class="role-main">
+            <h3>Analyst <span>· United Overseas Bank</span></h3>
+            <ul>
+              <li>Built an end-to-end document processing pipeline (classification → OCR/LLM extraction → rule-based validation), reducing manual processing workflows by <b>80%</b>.</li>
+              <li>Implemented LLM-based document type identification with prompt engineering to classify uploaded documents and route them to the right workflow.</li>
+              <li>Benchmarked 4 on-premise vision and language models (Qwen3.5, PaddleOCR-VL, GLM, DeepSeek-V4) on 210 financial documents, selecting the setup that reached <b>90%</b> extraction accuracy with few-shot prompting and JSON schema validation.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="role reveal">
+          <div class="role-when">Aug 2023 — Dec 2023</div>
+          <div class="role-main">
+            <h3>Fall Analyst <span>· Deutsche Bank</span></h3>
+            <ul>
+              <li>Worked with regional partners across APAC (including the Indonesia team) to gather FX booking requirements, then automated trade bookings — parsing trade data, validating it and generating booking entries on an hourly schedule, for an FTE saving of <b>0.313</b>.</li>
+              <li>Automated the FX email confirmation system in Python, sending remittance details to 300+ clients monthly and cutting manual effort by <b>15%</b>.</li>
+            </ul>
+          </div>
+          <img class="role-photo" src="assets/img/deutsche-bank.jpg" alt="Charlene at Deutsche Bank's office" loading="lazy" />
+        </li>
+      </ol>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+      <div class="section-head">
+        <p class="label">03 — About</p>
+        <h2>A little more about me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I studied Design and Artificial Intelligence at the Singapore University of Technology and Design, with a minor in Computer Science — so I tend to think about models and the people using them in the same breath.</p>
+          <p>These days I build document AI at UOB. Outside work I love travelling and exploring new cultures — including a semester in Gothenburg at Chalmers.</p>
+        </div>
+        <div class="about-cols reveal">
+          <div>
+            <h4>Education</h4>
+            <dl>
+              <dt>Singapore University of Technology and Design</dt>
+              <dd>B.Sc. Design &amp; Artificial Intelligence, minor in CS · 2021 — 2025</dd>
+              <dt>Chalmers University of Technology</dt>
+              <dd>Global Spring Exchange · 2024</dd>
+            </dl>
+          </div>
+          <div>
+            <h4>Toolkit</h4>
+            <ul class="pills">
+              <li>Python</li><li>JavaScript</li><li>TypeScript</li><li>Ruby</li><li>SQL</li><li>React</li><li>FastAPI</li><li>Airflow</li><li>MLflow</li><li>Neo4j</li><li>Docker</li><li>Kubernetes</li><li>AWS</li><li>GCP</li><li>Figma</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Certifications</h4>
+            <ul class="plain">
+              <li>Claude with Amazon Bedrock</li>
+              <li>Model Context Protocol — Intro &amp; Advanced Topics</li>
+              <li>AI Fluency: Framework and Foundations</li>
+              <li>AI Capabilities and Limitations</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Awards</h4>
+            <ul class="plain">
+              <li>James Dyson Foundation Industry 4.0 &amp; 3D Printing Project Award</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+      <p class="label">04 — Contact</p>
+      <h2 class="reveal">Let's build something <em>together.</em></h2>
+      <a class="big-mail reveal" href="mailto:charleneteoen10@gmail.com">charleneteoen10@gmail.com</a>
+      <div class="contact-links reveal">
+        <a href="https://www.linkedin.com/in/charleneteo" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="assets/Charlene-Teo-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Charlene Teo</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog class="modal" aria-labelledby="modal-title">
+    <button class="modal-close" aria-label="Close">✕</button>
+    <p class="card-meta" id="modal-meta"></p>
+    <h3 id="modal-title"></h3>
+    <div id="modal-body"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
