@@ -26,6 +26,52 @@ document.querySelectorAll('.reveal').forEach((el, i) => {
   io.observe(el);
 });
 
+const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Rotating headline word
+const rotator = document.querySelector('.rotator');
+if (rotator && !reduceMotion) {
+  const words = rotator.dataset.words.split(',');
+  const hidden = { opacity: 0, filter: 'blur(8px)' };
+  const shown = { opacity: 1, filter: 'blur(0)', transform: 'none' };
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % words.length;
+    rotator.animate([shown, { ...hidden, transform: 'translateY(-30%)' }], { duration: 350, easing: 'ease-in', fill: 'forwards' })
+      .onfinish = () => {
+        rotator.textContent = words[i];
+        rotator.animate([{ ...hidden, transform: 'translateY(30%)' }, shown], { duration: 550, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'forwards' });
+      };
+  }, 2600);
+}
+
+// Count-up numbers
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach(({ isIntersecting, target }) => {
+    if (!isIntersecting) return;
+    countIO.unobserve(target);
+    const to = +target.dataset.to;
+    if (reduceMotion) { target.textContent = to; return; }
+    const start = performance.now(), dur = 1600;
+    const tick = (now) => {
+      const t = Math.min((now - start) / dur, 1);
+      target.textContent = Math.round(to * (1 - Math.pow(1 - t, 3)));
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}, { threshold: 0.6 });
+document.querySelectorAll('.count').forEach((el) => countIO.observe(el));
+
+// Card spotlight follows the cursor
+document.querySelectorAll('.card').forEach((card) => {
+  card.addEventListener('pointermove', (e) => {
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+    card.style.setProperty('--my', `${e.clientY - r.top}px`);
+  });
+});
+
 // Project filters
 const chips = document.querySelectorAll('.chip');
 const cards = document.querySelectorAll('.card');
